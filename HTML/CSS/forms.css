@@ -1,0 +1,193 @@
+@import url("reset.css");
+@import url("header.css");
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(20, 5, 3, 0.9), rgba(20, 5, 3, 0.45)),
+    url("IMG/Roma-Antiga.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 70px 8%;
+  box-sizing: border-box;
+}
+
+.formulario {
+  width: 100%;
+}
+
+.formulario > .container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  background: #160c09;
+  color: white;
+  border: 1px solid #d99020;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.formulario > .container > div:first-child {
+  width: 45%;
+  padding: 45px;
+  box-sizing: border-box;
+}
+
+.formulario h1 {
+  font-size: 2.3rem;
+  margin: 0 0 25px;
+}
+
+.formulario span {
+  color: #d99020;
+}
+
+.formulario p {
+  line-height: 1.7;
+  color: #cfc4bc;
+  margin-bottom: 30px;
+}
+
+.formulario .contatos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario .contatos a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.formulario .contatos a:hover {
+  color: #d99020;
+}
+
+.formulario .contatos img {
+  width: 28px;
+  margin-right: 10px;
+}
+
+.formulario .forms {
+  width: 55%;
+  padding: 45px;
+  box-sizing: border-box;
+  border-left: 1px solid #4b3025;
+}
+
+.formulario li {
+  margin-bottom: 18px;
+  list-style: none;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.9rem;
+}
+
+.formulario .conteudo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #1c100d;
+  border: 1px solid #493027;
+  border-radius: 5px;
+}
+
+.formulario .conteudo:focus-within {
+  border-color: #d99020;
+}
+
+.formulario .conteudo img {
+  width: 22px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: white;
+  font-family: inherit;
+}
+
+.formulario input {
+  height: 25px;
+}
+
+.formulario textarea {
+  height: 90px;
+  resize: none;
+}
+
+.formulario ::placeholder {
+  color: #9b9187;
+}
+
+.formulario .botao {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.formulario button {
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 5px;
+  background: #d99020;
+  color: #1c100d;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background: #a86612;
+}
+
+.formulario button[type="reset"] {
+  background: transparent;
+  color: #d99020;
+  border: 1px solid #d99020;
+}
+
+@media (max-width: 750px) {
+  main {
+    padding: 50px 5%;
+  }
+
+  .formulario > .container {
+    display: block;
+  }
+
+  .formulario > .container > div:first-child,
+  .formulario .forms {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .formulario .forms {
+    border-left: 0;
+    border-top: 1px solid #4b3025;
+  }
+}
+
+@media (max-width: 500px) {
+  .formulario h1 {
+    font-size: 1.8rem;
+  }
+
+  .formulario .botao {
+    flex-direction: column;
+  }
+
+  .formulario button {
+    width: 100%;
+  }
+}

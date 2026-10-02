@@ -1,0 +1,314 @@
+@import url("header.css");
+@import url("footer.css");
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fff8ed;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* === Banner === */
+
+.banner {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
+    url("IMG/banner.rotas1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-conteudo {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.banner h1 {
+  color: white;
+  font-family: "Cinzel", serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: 1px;
+}
+
+.banner h1 span {
+  color: #d69d2a;
+}
+
+.banner-conteudo > p {
+  max-width: 650px;
+  color: #f5f2ec;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* === Seção Rotas === */
+.rotas {
+  padding: 60px 35px 30px;
+  background-color: #fff8ed;
+}
+
+.conteudo-rotas {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.texto-rotas {
+  text-align: center;
+}
+
+.titulo-secao {
+  margin-bottom: 5px;
+  color: #d69d2a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.rotas h2,
+.vias h2,
+.comercio-rotas h2,
+.conclusao h2 {
+  margin-bottom: 25px;
+  color: #420906;
+  font-family: "Cinzel", serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.texto-rotas > p:not(.titulo-secao) {
+  margin-bottom: 16px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.img-rotas {
+  width: 100%;
+  max-width: 850px;
+  margin: 35px auto 0;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #dfd5c8;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.img-rotas img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.conteudo-rotas h3 {
+  text-align: center;
+  color: #420906;
+  font-family: "Cinzel", serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.conteudo-rotas p {
+  text-align: justify;
+  color: #444;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  letter-spacing: 0.2px;
+}
+
+/* === Seção Vias === */
+
+.vias {
+  padding: 60px 30px 50px;
+  background-color: #f5f2ec;
+}
+
+.vias h2 {
+  text-align: center;
+}
+
+.vias > p {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #d69d2a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.container-vias {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* === Cards === **/
+
+.card-via {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #dfd5c8;
+  border-radius: 6px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+}
+
+.card-via:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.6);
+}
+
+.card-via img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.conteudo {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.vias h3 {
+  margin: 7px 0 12px;
+  color: #420906;
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+}
+
+.conteudo > p {
+  margin-bottom: 15px;
+  color: #444;
+  font-size: 13px;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.conteudo details {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #e5ddd3;
+}
+
+.conteudo summary {
+  width: fit-content;
+  color: #420906;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.conteudo details p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* === Seção Conclusão === */
+
+.conclusao p:first-child {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #d69d2a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.conclusao {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.conclusao h2 {
+  margin-bottom: 10px;
+}
+
+.conclusao > p {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Responsividade Desktop === */
+
+@media (min-width: 900px) {
+  .banner {
+    min-height: 620px;
+    padding: 70px 50px;
+  }
+
+  .banner h1 {
+    font-size: 45px;
+  }
+
+  .banner-conteudo > p {
+    font-size: 16px;
+  }
+
+  .rotas {
+    padding: 80px 20px;
+  }
+
+  .conteudo-rotas h3 {
+    text-align: left;
+  }
+
+  .texto-rotas p {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .vias {
+    padding: 80px 20px;
+  }
+
+  .container-vias {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+  }
+
+  .card-via {
+    grid-column: span 2;
+  }
+
+  .card-via:nth-child(4) {
+    grid-column: 2 / 4;
+  }
+
+  .card-via:nth-child(5) {
+    grid-column: 4 / 6;
+  }
+
+  .conclusao {
+    padding: 85px 20px;
+  }
+}
