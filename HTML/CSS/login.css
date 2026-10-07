@@ -1,3 +1,6 @@
+@import url('reset.css');
+@import url('header.css');
+
 :root {
   --bordo: #420906;
   --bordo-claro: #7b1e17;
@@ -208,6 +211,13 @@ body {
   transform: translateY(-2px);
 
   box-shadow: 0 8px 20px rgba(66, 9, 6, 0.25);
+}
+
+.obs {
+  font-size: 0.7rem;
+  color: grey;
+  opacity: 50%;
+  margin-bottom: 2vw;
 }
 
 #mensagem,
