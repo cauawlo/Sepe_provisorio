@@ -15,19 +15,14 @@ body {
 
 .banner h1 {
   padding: 80px 15px;
-
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
     url("IMG/Imagem roma.webp");
-
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
   color: white;
-
   text-align: center;
-
   font-family: "Cinzel", serif;
   font-size: 30px;
   line-height: 1.2;
@@ -50,46 +45,29 @@ body {
 }
 
 .cardAbout {
-  margin-bottom: 25px;
-
+  flex: 1;
+  margin-bottom: 0;
   padding: 22px;
-
-  background-color: #ffffff;
-
+  background-color: #fff;
   box-shadow: 0 10px 8px 3px rgba(0, 0, 0, 0.2);
-
   border-radius: 8px;
-
   line-height: 1.6;
-
   text-align: justify;
 }
 
 .cardAbout h2 {
   color: #420906;
-
   font-family: "Cinzel", serif;
-
   font-size: 22px;
-
   font-weight: 700;
-
   text-align: center;
-
   letter-spacing: 0.5px;
-
   margin-bottom: 15px;
 }
 
 .cardAbout p {
   font-family: "Open Sans", sans-serif;
-
   font-size: 14px;
-}
-.cardAbout {
-  flex: 1;
-
-  margin-bottom: 0;
 }
 
 /* === Estrutura do Comércio === */
@@ -97,40 +75,25 @@ body {
 .estruturaComercio {
   padding: 40px 18px;
   max-width: 1000px;
-
   margin: 0 auto;
   background-color: #fff8ed;
 }
 
 .estruturaComercio h2 {
   text-align: center;
-
   margin-bottom: 20px;
-
   font-family: "Cinzel", serif;
-
   font-size: 22px;
-
   color: #420906;
-
   font-weight: 700;
 }
 
 .containerEstrutura {
   max-width: 1000px;
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
-
   gap: 25px;
   margin: 0 auto;
-}
-
-.cardEstrutura:hover{
-   transition: 0.4s ease;
-  transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
-
 }
 
 .cardEstrutura {
@@ -151,36 +114,26 @@ body {
   font-weight: 700;
 }
 
-.cardEstrutura span{
+.cardEstrutura span {
   font-weight: bold;
   color: #610702;
 }
 
 .estruturaComercio img {
   display: block;
-
   width: 100%;
-
   height: 155px;
-
   object-fit: cover;
 }
 
 .cardEstrutura h3 {
   margin: 0;
-
   padding: 18px 15px 5px;
-
   color: #420906;
-
   font-family: "Cinzel", serif;
-
   letter-spacing: 1px;
-
   font-size: 16px;
-
   font-weight: 700;
-
   text-align: center;
 }
 
@@ -190,25 +143,15 @@ body {
 
 .cardEstrutura summary {
   width: fit-content;
-
   margin: 13px auto 5px;
-
   padding: 8px 15px;
-
   background-color: #420906;
-
   color: #fff8ed;
-
   border-radius: 5px;
-
   font-family: "Open Sans", sans-serif;
-
   font-size: 11px;
-
   font-weight: bold;
-
   list-style: none;
-
   cursor: pointer;
 }
 
@@ -218,15 +161,10 @@ body {
 
 .cardEstrutura details p {
   margin: 4px 18px 0;
-
   color: #212121;
-
   font-family: "Open Sans", sans-serif;
-
   font-size: 13px;
-
   line-height: 1.55;
-
   text-align: justify;
 }
 
@@ -234,28 +172,68 @@ body {
 
 #mercadoria-button {
   display: block;
-
   width: fit-content;
-
   margin: 40px auto 0;
-
   padding: 11px 18px;
-
   background-color: #420906;
-
   color: white;
-
   border-radius: 6px;
-
   font-family: "Open Sans", sans-serif;
-
   font-size: 14px;
-
   font-weight: 600;
-
   text-decoration: none;
 }
 
 #mercadoria-button:hover {
   background-color: #610702;
+}
+
+/* === Responsividade simples === */
+
+@media (max-width: 600px) {
+  .banner h1 {
+    padding: 55px 15px;
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+
+  .containerHistoria {
+    flex-direction: column;
+    padding: 25px 15px;
+    gap: 20px;
+  }
+
+  .cardAbout {
+    padding: 18px;
+  }
+
+  .cardAbout h2 {
+    font-size: 19px;
+  }
+
+  .cardAbout p {
+    font-size: 13px;
+  }
+
+  .estruturaComercio {
+    padding: 25px 15px;
+  }
+
+  .containerEstrutura {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cardEstrutura {
+    margin-bottom: 10px;
+  }
+
+  .estruturaComercio img {
+    height: 140px;
+  }
+
+  #mercadoria-button {
+    margin-top: 25px;
+    font-size: 13px;
+  }
 }

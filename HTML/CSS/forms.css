@@ -1,5 +1,8 @@
-@import url("reset.css");
 @import url("header.css");
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
 
 main {
   min-height: 100vh;
@@ -38,6 +41,7 @@ main {
 .formulario h1 {
   font-size: 2.3rem;
   margin: 0 0 25px;
+  font-family: "Cinzel", serif;
 }
 
 .formulario span {
