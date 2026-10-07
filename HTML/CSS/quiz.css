@@ -143,12 +143,14 @@ body {
   background-color: #2e7d32;
   border-color: #2e7d32;
   color: white;
+  transition: 0.4s;
 }
 
 .alternativa.errada {
   background-color: #a52a2a;
   border-color: #a52a2a;
   color: white;
+  transition: 0.4s;
 }
 
 .alternativa.acertou {

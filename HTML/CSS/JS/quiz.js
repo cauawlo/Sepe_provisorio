@@ -72,7 +72,12 @@ const perguntas = [
   {
     pergunta:
       "Qual via romana conectava regiões dos Bálcãs ao sistema de circulação oriental?",
-    alternativas: ["Via Aurélia", "Via Cássia", "Via Egnácia", "Via Flamínia"],
+    alternativas: [
+      "Via Aurélia",
+      "Via Cássia",
+      "Via Egnácia",
+      "Via Flamínia",
+    ],
     resposta: 2,
   },
 
@@ -82,7 +87,7 @@ const perguntas = [
       "Facilitava pagamentos e transações comerciais",
       "Eliminava a necessidade de mercadorias",
       "Era utilizada exclusivamente pelos soldados",
-      "Impedía o comércio entre províncias",
+      "Impedia o comércio entre províncias",
     ],
     resposta: 0,
   },
@@ -114,7 +119,7 @@ const perguntas = [
 
 let atual = 0;
 let pontos = 0;
-let escolha = null;
+let respondida = false;
 
 const $ = (id) => document.getElementById(id);
 
@@ -122,15 +127,19 @@ function mostrar() {
   const q = perguntas[atual];
 
   $("pergunta").textContent = q.pergunta;
+
   $("numero-questao").textContent =
     `QUESTÃO ${atual + 1} DE ${perguntas.length}`;
 
-  $("pontuacao").textContent = `PONTOS: ${pontos}`;
+  $("pontuacao").textContent =
+    `PONTOS: ${pontos}`;
 
-  $("progresso").style.width = `${((atual + 1) / perguntas.length) * 100}%`;
+  $("progresso").style.width =
+    `${((atual + 1) / perguntas.length) * 100}%`;
 
   $("alternativas").innerHTML = "";
-  escolha = null;
+
+  respondida = false;
 
   q.alternativas.forEach((texto, i) => {
     const botao = document.createElement("button");
@@ -139,28 +148,53 @@ function mostrar() {
     botao.className = "alternativa";
 
     botao.onclick = () => {
-      document
-        .querySelectorAll(".alternativa")
-        .forEach((b) => b.classList.remove("selecionada"));
 
-      botao.classList.add("selecionada");
-      escolha = i;
+      // Impede escolher outra alternativa
+      if (respondida) return;
+
+      respondida = true;
+
+      const botoes = document.querySelectorAll(".alternativa");
+
+      // Desativa todos os botões
+      botoes.forEach((b) => {
+        b.disabled = true;
+      });
+
+      // Se acertou
       if (i === q.resposta) {
         botao.classList.add("correta");
-        botao.classList.add("acertou");
-      } else {
-        botao.classList.add("errada");
+        pontos++;
       }
+
+      // Se errou
+      else {
+        botao.classList.add("errada");
+
+        // Mostra a resposta correta
+        botoes[q.resposta].classList.add("correta");
+      }
+
+      // Atualiza a pontuação
+      $("pontuacao").textContent =
+        `PONTOS: ${pontos}`;
     };
+
     $("alternativas").appendChild(botao);
   });
 }
 
+// BOTÃO PRÓXIMO
 $("proximo").onclick = () => {
-  if (escolha === null) return;
-  if (escolha === perguntas[atual].resposta) pontos++;
+  if (!respondida) return;
+
   atual++;
-  atual < perguntas.length ? mostrar() : resultado();
+
+  if (atual < perguntas.length) {
+    mostrar();
+  } else {
+    resultado();
+  }
 };
 
 function resultado() {
@@ -168,7 +202,8 @@ function resultado() {
   $("proximo").style.display = "none";
   $("resultado").style.display = "block";
 
-  $("pontuacao-final").textContent = `${pontos} de ${perguntas.length} pontos`;
+  $("pontuacao-final").textContent =
+    `${pontos} de ${perguntas.length} pontos`;
 
   $("mensagem-final").textContent =
     pontos >= 8
