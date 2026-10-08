@@ -3,12 +3,14 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #fff8ed;
   color: #333;
   font-family: "Open Sans", sans-serif;
+  user-select: none;
 }
 
 /* === Banner === */
@@ -42,6 +44,12 @@ body {
   max-width: 1000px;
   gap: 25px;
   margin: 0 auto;
+}
+
+.cardEstrutura:hover {
+  transition: 0.4s ease;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
 }
 
 .cardAbout {
