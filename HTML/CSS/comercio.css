@@ -111,6 +111,7 @@ body {
   border: 1px solid #dfd5c8;
   border-radius: 10px;
   margin-bottom: 30px;
+  transition:0.4s ease;
 }
 
 .cardEstrutura h4 {
