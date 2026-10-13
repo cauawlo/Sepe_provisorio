@@ -16,7 +16,7 @@ body {
 /* === Banner === */
 
 .banner h1 {
-  padding: 80px 15px;
+  padding: 55px 15px;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
     url("IMG/Imagem roma.webp");
@@ -26,9 +26,9 @@ body {
   color: white;
   text-align: center;
   font-family: "Cinzel", serif;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 1.2;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .banner span {
@@ -39,10 +39,11 @@ body {
 /* === História === */
 
 .containerHistoria {
-  padding: 40px 18px;
+  padding: 25px 15px;
   display: flex;
+  flex-direction: column;
   max-width: 1000px;
-  gap: 25px;
+  gap: 20px;
   margin: 0 auto;
 }
 
@@ -55,7 +56,7 @@ body {
 .cardAbout {
   flex: 1;
   margin-bottom: 0;
-  padding: 22px;
+  padding: 18px;
   background-color: #fff;
   box-shadow: 0 10px 8px 3px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -66,7 +67,7 @@ body {
 .cardAbout h2 {
   color: #420906;
   font-family: "Cinzel", serif;
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.5px;
@@ -75,13 +76,13 @@ body {
 
 .cardAbout p {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* === Estrutura do Comércio === */
 
 .estruturaComercio {
-  padding: 40px 18px;
+  padding: 25px 15px;
   max-width: 1000px;
   margin: 0 auto;
   background-color: #fff8ed;
@@ -99,8 +100,8 @@ body {
 .containerEstrutura {
   max-width: 1000px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   margin: 0 auto;
 }
 
@@ -110,8 +111,8 @@ body {
   background-color: white;
   border: 1px solid #dfd5c8;
   border-radius: 10px;
-  margin-bottom: 30px;
-  transition:0.4s ease;
+  margin-bottom: 10px;
+  transition: 0.4s ease;
 }
 
 .cardEstrutura h4 {
@@ -131,7 +132,7 @@ body {
 .estruturaComercio img {
   display: block;
   width: 100%;
-  height: 155px;
+  height: 140px;
   object-fit: cover;
 }
 
@@ -182,13 +183,13 @@ body {
 #mercadoria-button {
   display: block;
   width: fit-content;
-  margin: 40px auto 0;
+  margin: 25px auto 0;
   padding: 11px 18px;
   background-color: #420906;
   color: white;
   border-radius: 6px;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -199,50 +200,50 @@ body {
 
 /* === Responsividade simples === */
 
-@media (max-width: 600px) {
+@media (min-width: 601px) {
   .banner h1 {
-    padding: 55px 15px;
-    font-size: 22px;
-    letter-spacing: 2px;
+    padding: 80px 15px;
+    font-size: 30px;
+    letter-spacing: 4px;
   }
 
   .containerHistoria {
-    flex-direction: column;
-    padding: 25px 15px;
-    gap: 20px;
+    flex-direction: row;
+    padding: 40px 18px;
+    gap: 25px;
   }
 
   .cardAbout {
-    padding: 18px;
+    padding: 22px;
   }
 
   .cardAbout h2 {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   .cardAbout p {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .estruturaComercio {
-    padding: 25px 15px;
+    padding: 40px 18px;
   }
 
   .containerEstrutura {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 
   .cardEstrutura {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 
   .estruturaComercio img {
-    height: 140px;
+    height: 155px;
   }
 
   #mercadoria-button {
-    margin-top: 25px;
-    font-size: 13px;
+    margin-top: 40px;
+    font-size: 14px;
   }
 }

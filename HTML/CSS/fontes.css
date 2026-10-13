@@ -8,7 +8,7 @@ body{
 }
 
 .banner{
-    min-height:300px;
+    min-height:260px;
     display:flex;
     align-items:center;
     padding:50px 25px;
@@ -35,7 +35,7 @@ body{
     margin-bottom:12px;
     color:white;
     font-family:"Cinzel",serif;
-    font-size:38px;
+    font-size:30px;
 }
 
 .banner span{
@@ -44,7 +44,7 @@ body{
 }
 
 .fontes{
-    padding:70px 20px;
+    padding:50px 15px;
     background:#f5f2ec;
 }
 
@@ -61,14 +61,14 @@ body{
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr;
     gap:25px;
     max-width:1000px;
     margin:auto;
 }
 
 .card{
-    padding:30px;
+    padding:25px;
     background:white;
     border:1px solid #dfd5c8;
     border-radius:6px;
@@ -105,24 +105,24 @@ body{
     background:#7b1e17;
 }
 
-@media(max-width:600px){
+@media(min-width:601px){
     .banner{
-        min-height:260px;
+        min-height:300px;
     }
 
     .banner h1{
-        font-size:30px;
+        font-size:38px;
     }
 
     .cards{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
     }
 
     .fontes{
-        padding:50px 15px;
+        padding:70px 20px;
     }
 
     .card{
-        padding:25px;
+        padding:30px;
     }
 }
