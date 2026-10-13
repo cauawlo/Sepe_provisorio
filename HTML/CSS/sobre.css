@@ -20,23 +20,22 @@ h3 {
 
 /* === BANNER === */
 
-
 .banner {
-  min-height: 420px;
-  padding: 70px 10%;
+  min-height: 300px;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.78)),
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.78)),
     url("https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1600&q=80")
-    center / cover;
+      center / cover;
 }
 
 .banner h1 {
   margin: 0 0 15px;
   color: #fff;
-  font-size: 52px;
+  font-size: 32px;
   font-weight: 600;
 }
 
@@ -44,14 +43,14 @@ h3 {
   max-width: 600px;
   margin: 0;
   color: #e9e3da;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
 /* === SOBRE NÓS === */
 
 .sobre {
-  padding: 90px 10%;
+  padding: 50px 20px;
   background: #420906;
   text-align: center;
 }
@@ -62,7 +61,7 @@ h3 {
 .tecnologias h2 {
   margin: 0 0 30px;
   color: #d69d2a;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 600;
 }
 
@@ -70,9 +69,8 @@ h3 {
   max-width: 950px;
   margin: 0 auto 20px;
   color: #f4eee6;
-    font-family: "Open Sans", sans-serif;
-
-  font-size: 17px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
   line-height: 1.9;
   text-align: justify;
 }
@@ -80,7 +78,7 @@ h3 {
 /* === OBJETIVO === */
 
 .objetivo {
-  padding: 85px 10%;
+  padding: 50px 20px;
   background: #fff8ed;
   color: #420906;
 }
@@ -95,19 +93,18 @@ h3 {
 }
 
 .objetivo p {
-   font-family: "Open Sans", sans-serif;
- max-width: 850px;
+  font-family: "Open Sans", sans-serif;
+  max-width: 850px;
   margin: 0;
   color: #51453d;
-  
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.9;
 }
 
 /* === INTEGRANTES === */
 
 .integrantes {
-  padding: 90px 5%;
+  padding: 50px 20px;
   background: #f7ecda;
   text-align: center;
 }
@@ -130,6 +127,8 @@ h3 {
   max-width: 1100px;
   margin: 45px auto 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
@@ -138,13 +137,14 @@ h3 {
 /* === CARDS === */
 
 .card {
-  width: 220px;
+  width: 90%;
+  max-width: 220px;
   overflow: hidden;
   background: #fff;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0,0,0,.18);
-  transition: .3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  transition: 0.3s;
 }
 
 .card:hover {
@@ -153,7 +153,7 @@ h3 {
 
 .card.ativo {
   transform: translateY(-8px);
-  box-shadow: 0 0 0 3px rgba(214,157,42,.2);
+  box-shadow: 0 0 0 3px rgba(214, 157, 42, 0.2);
 }
 
 /* === FOTO === */
@@ -200,7 +200,7 @@ h3 {
   max-width: 900px;
   min-height: 150px;
   margin: 45px auto 0;
-  padding: 28px;
+  padding: 20px;
   background: #420906;
   border-radius: 8px;
   color: #f5f2ec;
@@ -229,49 +229,48 @@ h3 {
 
 /* === RESPONSIVIDADE === */
 
-@media (max-width: 600px) {
-
+@media (min-width: 601px) {
   .banner {
-    padding: 50px 20px;
-    min-height: 300px;
+    padding: 70px 10%;
+    min-height: 420px;
   }
 
   .banner h1 {
-    font-size: 32px;
+    font-size: 52px;
   }
 
   .banner p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .sobre,
   .objetivo,
   .integrantes {
-    padding: 50px 20px;
+    padding: 90px 10%;
   }
 
   .sobre h2,
   .objetivo h2,
   .integrantes h2 {
-    font-size: 28px;
+    font-size: 36px;
   }
 
   .sobre p,
   .objetivo p {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .equipe {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: initial;
   }
 
   .card {
-    width: 90%;
-    max-width: 220px;
+    width: 220px;
+    max-width: none;
   }
 
   #informacao {
-    padding: 20px;
+    padding: 28px;
   }
 }

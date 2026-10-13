@@ -1,4 +1,4 @@
-@import url('reset.css');
+@import url("reset.css");
 
 :root {
   --cor-fundo: #1a1410;
@@ -7,7 +7,6 @@
   --cor-dourado: #c9a227;
   --cor-botao-texto: #1a1410;
 }
-
 
 body {
   position: relative;
@@ -29,8 +28,6 @@ body {
   overflow: hidden;
   font-family: Georgia, "Times New Roman", serif;
 }
-
-
 
 .obrigado h1 {
   color: var(--cor-titulo);
@@ -63,7 +60,7 @@ body {
 }
 
 .obrigado span {
-    color: var(--cor-dourado);
+  color: var(--cor-dourado);
 }
 
 .botao:hover {
@@ -71,6 +68,4 @@ body {
   opacity: 0.85;
   font-size: 1.1rem;
   transition: 0.3s;
-  
 }
-

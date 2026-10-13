@@ -1,6 +1,5 @@
 @import url("header.css");
 @import url("footer.css");
-@import url('reset.css');
 
 html {
   font-size: 16px;
@@ -15,7 +14,7 @@ body {
 /* === Banner === */
 
 .banner {
-  min-height: 600px;
+  min-height: 520px;
   display: flex;
   align-items: center;
   background-image:
@@ -24,8 +23,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 4vw;
+  padding: 50px 20px;
 }
+
 .banner-conteudo {
   width: 100%;
   max-width: 960px;
@@ -35,7 +35,7 @@ body {
 .banner h1 {
   color: white;
   font-family: "Cinzel", serif;
-  font-size: 45px;
+  font-size: 30px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 2px;
@@ -53,10 +53,14 @@ body {
   letter-spacing: 1.1px;
 }
 
+.banner-conteudo > p:last-child {
+  font-size: 14px;
+}
+
 /* === Seção Introdução === */
 
 .introducao {
-  padding: 75px 20px 40px;
+  padding: 55px 20px;
   background-color: #fff8ed;
 }
 
@@ -72,7 +76,7 @@ body {
   margin-bottom: 25px;
   color: #420906;
   font-family: "Cinzel", serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
   line-height: 1.3;
 }
@@ -93,13 +97,13 @@ body {
 /* === Tecnologias === */
 
 .tecnologias {
-  padding: 70px 20px 80px;
+  padding: 55px 18px;
   background-color: #f5f2ec;
 }
 
 .titulo-secao {
   max-width: 850px;
-  margin: 0 auto 45px;
+  margin: 0 auto 30px;
   text-align: center;
 }
 
@@ -115,7 +119,7 @@ body {
   margin: 0;
   color: #420906;
   font-family: "Cinzel", serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -129,8 +133,8 @@ body {
   max-width: 1050px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .card-tecnologia {
@@ -208,13 +212,15 @@ body {
 
 .circulacao {
   text-align: center;
-  padding: 75px 20px;
+  padding: 55px 20px;
   background-color: #fff8ed;
 }
 
 .circulacao-conteudo {
   max-width: 1000px;
   margin: 0 auto;
+  flex-direction: column;
+  gap: 35px;
 }
 
 .circulacao h2 {
@@ -232,64 +238,59 @@ body {
   line-height: 1.8;
 }
 
+.circulacao-frase {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.conclusao {
+  padding: 60px 20px;
+}
+
 /* === Responsividade Celular === */
 
-@media (max-width: 600px) {
+@media (min-width: 601px) {
   .banner {
-    min-height: 520px;
-    padding: 50px 20px;
+    min-height: 600px;
+    padding: 4vw;
   }
 
   .banner h1 {
-    font-size: 30px;
+    font-size: 45px;
   }
 
   .banner-conteudo > p:last-child {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .introducao {
-    padding: 55px 20px;
+    padding: 75px 20px 40px;
   }
 
   .introducao h2,
   .circulacao h2,
   .conclusao h2 {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .tecnologias {
-    padding: 55px 18px;
+    padding: 70px 20px 80px;
   }
 
   .titulo-secao {
-    margin-bottom: 30px;
+    margin-bottom: 45px;
   }
 
   .titulo-secao h2 {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .container-tecnologias {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
   }
 
   .circulacao {
-    padding: 55px 20px;
-  }
-
-  .circulacao-conteudo {
-    flex-direction: column;
-    gap: 35px;
-  }
-
-  .circulacao-frase {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .conclusao {
-    padding: 60px 20px;
+    padding: 75px 20px;
   }
 }
